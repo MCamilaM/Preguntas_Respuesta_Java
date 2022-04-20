@@ -13,7 +13,7 @@ public class Ronda {
 
     }
 
-    public void inicarRonda(){}
+    public void iniciarRonda(){}
 
     public void salirRonda(){}
 

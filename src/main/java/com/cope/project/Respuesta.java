@@ -1,10 +1,10 @@
 package com.cope.project;
 
 public class Respuesta {
-    int id;
-    String descripcion;
-    boolean esCorrecta;
-    int idPregunta;
+    private int id;
+    private String descripcion;
+    private boolean esCorrecta;
+    private int idPregunta;
 
-    void getEsCorrecta(){}
+    public void getEsCorrecta(){}
 }
