@@ -1,7 +1,7 @@
 package com.cope.project;
 
 public class Puntaje {
-    int puntaje;
+    int puntajes;
 
     void incrementarPuntaje(){}
 }
