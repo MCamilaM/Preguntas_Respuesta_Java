@@ -15,5 +15,6 @@ public class Pregunta {
     public void cargarRespuestas(){}
 
     public void mostrarRespuestas(){
+
     }
 }
