@@ -27,14 +27,15 @@ public class Main {
             try {
                 System.out.print("\nIngresa una opción: ");
                 opcion = Integer.parseInt(reader.readLine());
+                Ronda rondas = new Ronda();
                 switch (opcion) {
                     case 1:
-                        Ronda rondas = new Ronda();
+                        //Ronda rondas = new Ronda();
                         rondas.iniciarRonda();
                         //reader.readLine();
                         break;
                     case 2:
-                        //ronda1.listarHistorico();
+                         rondas.listarHistorico();
                         break;
                     case 3:
                         //imprimir instrucciones
@@ -51,8 +52,6 @@ public class Main {
             } catch (Exception e) {
                 System.out.println("Por favor, ingrese un dato válido.");
             }
-
-
 
 
         }

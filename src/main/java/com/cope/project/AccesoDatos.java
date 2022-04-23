@@ -34,6 +34,7 @@ public class AccesoDatos implements IAccesoDatos {
         return categoria;
     }
 
+
     @Override
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
@@ -123,4 +124,39 @@ public class AccesoDatos implements IAccesoDatos {
         return puntaje;
     }
 
+    @Override
+    public List<String> listarHistorico(String nombreArchivo) {
+        File archivo = new File(nombreArchivo);
+        List<String> historicos = new ArrayList<>();
+        try {
+            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            String lectura = entrada.readLine();
+
+            while (lectura != null) {
+                historicos.add(lectura);
+                lectura = entrada.readLine();
+            }
+            entrada.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+        return historicos;
+    }
+
+    @Override
+    public void escribirHistorico(String nombreArchivo, String historico) {
+        File archivo = new File(nombreArchivo);
+        try {
+             PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));
+            salida.append(historico);
+            salida.close();
+            //System.out.println("Se ha anexado en el archivo");
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+    }
 }

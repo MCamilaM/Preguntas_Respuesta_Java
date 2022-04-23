@@ -12,4 +12,10 @@ public interface IAccesoDatos {
     List<Respuesta> listarRespuesta(String nombreArchivo, Integer idRespuesta);
 
     Puntaje listarPuntaje(String nombreArchivo, Integer idCategoria);
+
+    List<String> listarHistorico(String nombreArchivo);
+
+    void escribirHistorico(String nombreArchivo, String historico);
+
+
 }

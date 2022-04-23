@@ -5,6 +5,7 @@ public class Puntaje {
     private Integer puntaje;
 
     public Puntaje() {
+        this.puntaje = 0;
     }
 
     public Puntaje(Integer idPuntaje, Integer puntaje) {

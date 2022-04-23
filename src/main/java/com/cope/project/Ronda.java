@@ -15,6 +15,7 @@ public class Ronda {
     private Jugador jugador;
     private AccesoDatos accesoDatos;
     private List<Respuesta> respuestas;
+    Scanner capturar = new Scanner(System.in);
 
     public Ronda() {
         this.numRonda = 1;
@@ -22,9 +23,13 @@ public class Ronda {
         respuestas = new ArrayList<>();
         categoria = new Categoria();
         pregunta = new Pregunta();
+        puntaje = new Puntaje();
+        jugador=new Jugador();
     }
 
     public void iniciarRonda() {
+        System.out.print("Ingrese su nombre de usuario: ");
+        this.jugador.setNombre(capturar.nextLine());
         System.out.println("-----------------------------------");
         System.out.println("|    ¡Listo o no, aquí vamos!     |");
         System.out.println("-----------------------------------");
@@ -58,7 +63,6 @@ public class Ronda {
     private void listarRespuestas() {
         this.respuestas.clear();
         this.respuestas = accesoDatos.listarRespuesta("respuestas.txt", this.pregunta.getIdPregunta());
-        Scanner capturar = new Scanner(System.in);
         int opcion = 6;
         String mensaje = ">Ingrese una opción: ";
         String pregunta = "";
@@ -66,10 +70,10 @@ public class Ronda {
             int cont = 1;
             System.out.println(pregunta);
             for (Respuesta respuesta : respuestas) {
-                System.out.println(cont + ". " + respuestas.get(cont - 1).getDescripcion());
+                System.out.println(cont + ". " + respuesta.getDescripcion());
                 cont++;
             }
-            System.out.println("5. Salir");
+            System.out.println("5. Rendirse");
             System.out.print(mensaje);
             try {
                 pregunta = this.pregunta.getPregunta();
@@ -81,9 +85,10 @@ public class Ronda {
                 capturar.nextLine();
                 // e.printStackTrace();
             }
-        } while (opcion > 5 && opcion != 5);
-        if (opcion == 5) {
+        } while ((opcion > 5 || opcion < 1) && opcion != 5);
+        if (opcion == 5){
             salirRondaIntensional();
+            agregarHistorico();
         } else {
             validarRespuesta(opcion - 1);
         }
@@ -97,18 +102,19 @@ public class Ronda {
         Respuesta respuesta = respuestas.get(indiceRespuesta);
         if (respuesta.isCorrecta() && this.numRonda == 5) {
             incrementarPuntaje();
-            finalizarJuego(); //gana el juego
-            System.out.println("Puntaje: " + this.puntaje.getPuntaje());
+            agregarHistorico();
+            finalizarJuego(); //gana el jue
         } else if (respuesta.isCorrecta()) {
             incrementarPuntaje();
             siguienteRonda(); // pasa a la siguiente pregunta
         } else {
             terminarJuegoForzado(); // pierde y se terminar el juego
+            agregarHistorico();
         }
     }
 
     public void siguienteRonda() {
-        System.out.println("-----------------------------------");
+        System.out.println("\n-----------------------------------");
         System.out.println("|       ¡Brus, Brus, Brus!        |");
         System.out.println("-----------------------------------");
         System.out.println(" ");
@@ -120,6 +126,7 @@ public class Ronda {
     }
 
     public void salirRondaIntensional() {
+        System.out.println("\nTu puntaje es: " + this.puntaje.getPuntaje());
         System.out.println("-----------------------------------");
         System.out.println("|       Hasta la próxima...       |");
         System.out.println("-----------------------------------");
@@ -127,7 +134,7 @@ public class Ronda {
     }
 
     public void finalizarJuego() {
-        System.out.println("-----------------------------------");
+        System.out.println("\n-----------------------------------");
         System.out.println("|       G A N A S T E :)          |");
         System.out.println("|       Hasta la próxima...       |");
         System.out.println("-----------------------------------");
@@ -135,7 +142,7 @@ public class Ronda {
     }
 
     public void terminarJuegoForzado() {
-        System.out.println("-----------------------------------");
+        System.out.println("\n-----------------------------------");
         System.out.println("|   Practica más para la próxima  |");
         System.out.println("|     Aunque perdiste tu premio   |");
         System.out.println("|            ...Ups...            |");
@@ -143,5 +150,17 @@ public class Ronda {
         System.out.println(" ");
     }
 
+    public void agregarHistorico() {
+        String nombre = this.jugador.getNombre();
+        String puntaje = String.valueOf(this.puntaje.getPuntaje());
+        this.accesoDatos.escribirHistorico("historicos.txt",nombre + ": " + puntaje);
+    }
 
+    public void listarHistorico(){
+        List<String> historicos = this.accesoDatos.listarHistorico("historicos.txt");
+        for (String historico : historicos) {
+            System.out.println(historico);
+        }
+
+    }
 }
