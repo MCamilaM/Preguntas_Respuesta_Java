@@ -29,6 +29,8 @@ public class Ronda {
         System.out.println("|    ¡Listo o no, aquí vamos!     |");
         System.out.println("-----------------------------------");
         System.out.println(" ");
+        listarPreguntaAleatoria();
+        listarRespuestas();
     }
 
     public void salirRonda(){
