@@ -11,4 +11,5 @@ public class Categoria {
     }
 
     public void preguntaAleatoria(){}
+
 }

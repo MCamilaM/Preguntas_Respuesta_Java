@@ -1,0 +1,5 @@
+1,facil
+2,normal
+3,dificil
+4,muy dificil
+5,maximo

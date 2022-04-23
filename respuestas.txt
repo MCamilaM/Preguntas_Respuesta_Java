@@ -1,0 +1,100 @@
+1,Platón,0,1
+2,Homero,1,1
+3,Sócrates,0,1
+4,Heródoto,0,1
+5,Reptiles,0,2
+6,Poríferos,0,2
+7,Peces,0,2
+8,Mamíferos,1,2
+9,3,141592,1,3
+10,3,151692,0,3
+11,3,135215,0,3
+12,3,145215,0,3
+13,80,0,4
+14,105,0,4
+15,90,1,4
+16,95,0,4
+17,NodeJS,0,5
+18,React JS,0,5
+19,Java,1,5,
+20,Angular,0,5
+21,Dulce,0,6
+22,Umami,0,6
+23,Amargo,0,6
+24,Agrio,1,6
+25,8,0,7
+26,6,1,7
+27,9,0,7
+28,3,0,7
+29,Rafael Núñez,1,8
+30,Oreste Síndici,0,8
+31,Blas Parera,0,8
+32,Miguel Antonio Caro,0,8
+33,Chipe Azul,0,9
+34,Gerigón piquicorto,0,9
+35,Colibrí,1,9
+36,Búho,0,9
+37,Mario Vargas Llosa,0,10
+38,Julio Cortázar,0,10
+39,Juan Rulfo,0,10
+40,Gabriel García Marquez ,1,10
+41,Catedral de Sal,1,11
+42,Catedral Primada,0,11
+43,Templo de San Agustín,0,11
+44,Templo Bogotá Colombia,0,11
+45,Chile,0,12
+46,Mexico,0,12
+47,Colombia,0,12
+48,Argentina,1,12
+49,Un doceavo,1,13
+50,3/4 partes,0,13
+51,Dos,0,13
+52,Un Séptimo,0,13
+53,25%,0,14
+54,75%,0,14
+55,20%,1,14
+56,10%,0,14
+57,2021,0,15
+58,2013,0,15
+59,2018,0,15
+60,2012,1,15
+61,Moscú,0,16
+62,Estambul,1,16
+63,Berlín,0,16
+64,Nairobi,0,16
+65,Edwin Eugene Aldrin,1,17
+66,Neil Armstrong,0,17
+67,Eugene Cernan,0,17
+68,Michael Armstrong,0,17
+69,La piel,1,18
+70,El corazón,0,18
+71,El hígado,0,18
+72,El cerebro,0,18
+73,Baloncesto,0,19
+74,Golf,0,19,
+75,Voley,0,19,
+76,Billar,1,19,
+77,Cromo,0,20
+78,Copernicio,0,20
+79,Cadmio,0,20
+80,Ninguna de las anteriores,1,20
+81,Alfa Centauri,1,21
+82,Betelgeuse,0,21
+83,Achernar,0,21
+84,Rigel,0,21
+85,Tiburón,0,22
+86,Mosquito,1,22
+87,Nutria,0,22
+88,Caballo,0,22
+89,5,0,23
+90,2,0,23
+91,7,0,23
+92,4,1,23
+93,Animal,0,24
+94,Pueblo,0,24
+95,Mineral,1,24
+96,Rio,0,24
+97,114,0,25
+98,117,0,25
+99,119,1,25
+100,121,0,25

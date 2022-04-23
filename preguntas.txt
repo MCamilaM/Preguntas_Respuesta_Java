@@ -1,0 +1,25 @@
+1,¿Quién escribió La Odisea?,1
+2,¿Qué tipo de animal es la ballena?,1
+3,¿A cuánto equivale π (pi)?,1
+4,¿Cuántos minutos dura un partido de fútbol?,1
+5,¿Cuál es un lenguaje de programación?,1
+6,¿Cuál no es un sabor primario?,2
+7,¿Cuántos años tengo sabiendo que la tercera parte de ellos menos 1 es igual a la sexta parte?,2
+8,¿Cuál es el autor de la letra del Himno Nacional?,2
+9,¿Cuál es la única ave capaz de volar hacia atrás?,2
+10,¿Quién es el autor del libro “Cien años de soledad”?,2
+11,¿Cómo se llama este templo subterráneo situado en Colombia?,3
+12,¿En qué país se encuentra ubicada la Casa Rosada?,3
+13,¿Cuánto es la cuarta parte de la tercera parte?,3
+14,¿Cuánto habrá que rebajar un producto para que valga lo mismo que valía antes de que incrementase un 25% su precio?,3
+15,¿Qué año fue bisiesto?,3
+16,¿Cuál es la única ciudad que está en dos continentes distintos?,4
+17,¿Cuál fue el segundo hombre en ir a la luna?,4
+18,¿Cuál es el órgano más grande del cuerpo humano?,4
+19,¿En qué deporte puedes hacer una tacada?,4
+20,¿Qué elemento de la tabla periódica tiene este símbolo químico Co?,4
+21,¿Cuál es la estrella más cercana al Sol?,5
+22,¿Qué animal tiene 47 piezas de esmalte fijadas a los huesos maxilares?,5
+23,¿Cuántos mares rodean la península de los Balcanes?,5
+24,¿Qué es el coltán?,5
+25,¿Cuantos años tiene la mujer más longeva del mundo?,5
