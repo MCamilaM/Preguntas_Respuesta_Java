@@ -7,6 +7,7 @@ import java.io.File;
 import java.io.FileReader;
 
 public class AccesoDatos implements IAccesoDatos {
+    @Override
     public Categoria listarCategoria(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
         Categoria categoria = null;
@@ -33,6 +34,7 @@ public class AccesoDatos implements IAccesoDatos {
         return categoria;
     }
 
+    @Override
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
         List<Pregunta> preguntas = new ArrayList<>();
@@ -60,7 +62,7 @@ public class AccesoDatos implements IAccesoDatos {
         return preguntas;
     }
 
-
+    @Override
     public List<Respuesta> listarRespuesta(String nombreArchivo, Integer idPregunta) {
         File archivo = new File(nombreArchivo);
         List<Respuesta> respuestas = new ArrayList<>();
@@ -91,6 +93,34 @@ public class AccesoDatos implements IAccesoDatos {
             ex.printStackTrace(System.out);
         }
         return respuestas;
+    }
+
+    @Override
+    public Puntaje listarPuntaje(String nombreArchivo, Integer idCategoria) {
+        File archivo = new File(nombreArchivo);
+        Puntaje puntaje = null;
+
+        try {
+            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            String lectura = entrada.readLine();
+
+            while (lectura != null) {
+
+                String[] cadena = lectura.split(",");
+                Integer id = Integer.parseInt(cadena[0]);
+                Integer puntos = Integer.parseInt(cadena[1]);
+                if (id == idCategoria) {
+                    puntaje = new Puntaje(id, puntos);
+                }
+                lectura = entrada.readLine();
+            }
+            entrada.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+        return puntaje;
     }
 
 }

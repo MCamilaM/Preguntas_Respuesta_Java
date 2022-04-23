@@ -10,4 +10,6 @@ public interface IAccesoDatos {
     List<Pregunta> listarPreguntas(String nombreArchivo, Integer idPregunta);
 
     List<Respuesta> listarRespuesta(String nombreArchivo, Integer idRespuesta);
+
+    Puntaje listarPuntaje(String nombreArchivo, Integer idCategoria);
 }

@@ -8,7 +8,7 @@ import java.io.BufferedReader;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         int opcion = 0;
         while (opcion != 4) {
@@ -31,7 +31,7 @@ public class Main {
                     case 1:
                         Ronda rondas = new Ronda();
                         rondas.iniciarRonda();
-                        reader.reset();
+                        //reader.readLine();
                         break;
                     case 2:
                         //ronda1.listarHistorico();
@@ -40,15 +40,19 @@ public class Main {
                         //imprimir instrucciones
                         break;
                     case 4:
-                        System.out.println("Gracias por jugar... ");
+                        System.out.println("-----------------------------------");
+                        System.out.println("|       Gracias por Jugar...       |");
+                        System.out.println("-----------------------------------");
                         break;
                     default:
-                        System.out.println("Por favor, ingrese un dato válido. default");
+                        System.out.println("Por favor, ingresa un opción valida. del 1 al 4: ");
                         break;
                 }
             } catch (Exception e) {
-                System.out.println("Por favor, ingrese un dato válido. catch");
+                System.out.println("Por favor, ingrese un dato válido.");
             }
+
+
 
 
         }

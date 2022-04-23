@@ -1,8 +1,26 @@
 package com.cope.project;
 
 public class Puntaje {
-    private int puntajes;
+    private Integer idPuntaje;
+    private Integer puntaje;
 
-    public void incrementarPuntaje() {
+    public Puntaje() {
+    }
+
+    public Puntaje(Integer idPuntaje, Integer puntaje) {
+        this.idPuntaje = idPuntaje;
+        this.puntaje = puntaje;
+    }
+
+    /*public void incrementarPuntaje(Integer puntos) {
+        this.puntaje += puntos;
+    }*/
+
+    public Integer getPuntaje() {
+        return puntaje;
+    }
+
+    public Integer getIdPuntaje() {
+        return idPuntaje;
     }
 }

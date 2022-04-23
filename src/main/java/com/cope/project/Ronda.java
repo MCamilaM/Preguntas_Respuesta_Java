@@ -36,6 +36,14 @@ public class Ronda {
 
     }
 
+    public void solicitarDatosJugador(){
+
+    }
+
+    public void incrementarPuntaje(){
+        this.puntaje = this.accesoDatos.listarPuntaje("puntajes.txt", this.categoria.getIdCategoria());
+    }
+
     public void listarCategoria() {
         this.categoria = accesoDatos.listarCategoria("categoria.txt", this.numRonda);
     }
@@ -48,7 +56,7 @@ public class Ronda {
     }
 
     private void listarRespuestas() {
-        respuestas.clear();
+        this.respuestas.clear();
         this.respuestas = accesoDatos.listarRespuesta("respuestas.txt", this.pregunta.getIdPregunta());
         Scanner capturar = new Scanner(System.in);
         int opcion = 6;
@@ -66,10 +74,6 @@ public class Ronda {
             try {
                 pregunta = this.pregunta.getPregunta();
                 opcion = capturar.nextInt();
-                if (opcion == 5) {
-                    salirRondaIntensional();
-                    break;
-                }
                 mensaje = "Ingresa un opción valida. del 1 al 5: ";
 
             } catch (Exception e) {
@@ -78,9 +82,11 @@ public class Ronda {
                 // e.printStackTrace();
             }
         } while (opcion > 5 && opcion != 5);
-
-        validarRespuesta(opcion - 1);
-
+        if (opcion == 5) {
+            salirRondaIntensional();
+        } else {
+            validarRespuesta(opcion - 1);
+        }
     }
 
     public void incrementarNumeroRonda() {
@@ -90,8 +96,11 @@ public class Ronda {
     private void validarRespuesta(int indiceRespuesta) {
         Respuesta respuesta = respuestas.get(indiceRespuesta);
         if (respuesta.isCorrecta() && this.numRonda == 5) {
+            incrementarPuntaje();
             finalizarJuego(); //gana el juego
+            System.out.println("Puntaje: " + this.puntaje.getPuntaje());
         } else if (respuesta.isCorrecta()) {
+            incrementarPuntaje();
             siguienteRonda(); // pasa a la siguiente pregunta
         } else {
             terminarJuegoForzado(); // pierde y se terminar el juego
