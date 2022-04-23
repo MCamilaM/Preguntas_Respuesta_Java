@@ -5,11 +5,15 @@ public class Categoria {
     private String descripcion;
     private Pregunta[] preguntas;
 
+    public Categoria() {
+    }
+
     public Categoria(Integer idCategoria, String descripcion) {
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
     }
 
-    public void preguntaAleatoria(){}
-
+    public Integer getIdCategoria() {
+        return idCategoria;
+    }
 }
