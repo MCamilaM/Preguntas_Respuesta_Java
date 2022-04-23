@@ -6,11 +6,11 @@ public class Pregunta {
     private int idCategoria;
     private Respuesta[] respuestas;
 
-    public Pregunta(int idPregunta, String pregunta, int idCategoria, Respuesta[] respuestas) {
+    public Pregunta(int idPregunta, String pregunta, int idCategoria) {
         this.idPregunta = idPregunta;
         this.pregunta = pregunta;
         this.idCategoria = idCategoria;
-        this.respuestas = respuestas;
+        
     }
 
     public void cargarRespuestas(){}
@@ -20,4 +20,10 @@ public class Pregunta {
             System.out.println(respuesta.getDescripcion());
         }
     }
+    public int getIdPregunta(){
+        return this.idPregunta;
+    }
+    public String getPregunta(){
+            return this.pregunta;
+        }
 }

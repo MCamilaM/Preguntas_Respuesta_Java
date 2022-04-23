@@ -1,11 +1,11 @@
 package com.cope.project;
 
 public class Categoria {
-    private int idCategoria;
+    private Integer idCategoria;
     private String descripcion;
     private Pregunta[] preguntas;
 
-    public Categoria(int idCategoria, String descripcion) {
+    public Categoria(Integer idCategoria, String descripcion) {
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
     }

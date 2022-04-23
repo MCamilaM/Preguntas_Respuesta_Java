@@ -1,21 +1,52 @@
 package com.cope.project;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @Author: Camila Morales - Josep Palomino - Sara Oquendo
  */
 public class Main {
+
     public static void main(String[] args) {
+        Ronda ronda1 = new Ronda();
+        ronda1.listarPreguntaAleatoria();
+        //ronda1.listarRespuestas();
+        /*File archivo = new File("preguntas.txt");
+        List<Pregunta> preguntas = new ArrayList<>();
+        System.out.println("ssads");
+        try {
+            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            String lectura = entrada.readLine();
+            System.out.println("ssads");
 
-        Respuesta respuesta1 = new Respuesta(1,"ballena",true,1);
-        Respuesta respuesta2 = new Respuesta(2,"tiburon",false,1);
-        Respuesta respuesta3 = new Respuesta(3,"pollo",false,1);
-        Respuesta respuesta4 = new Respuesta(4,"chicha morada",false,1);
-        Respuesta[] respuestas = {respuesta1,respuesta2,respuesta3,respuesta4};
-        Pregunta pregunta = new Pregunta(1,"animal acuatico", 1, respuestas);
-        pregunta.mostrarRespuestas();
-        ArchivoTexto aT = new ArchivoTexto();
-        aT.leerArchivo("preguntas.txt");
-        //Prueba
+            while (lectura != null) {
+
+                String[] cadena = lectura.split(",");
+                Integer id = Integer.parseInt(cadena[2]);
+                Integer idCat = Integer.parseInt(cadena[2]);
+                //System.out.println(lectura);
+                if(1 == id){
+                    preguntas.add(new Pregunta(id,cadena[1],idCat));
+
+                }
+
+                lectura = entrada.readLine();
+            }
+            entrada.close();
+        } catch (FileNotFoundException ex) {
+            ex.printStackTrace(System.out);
+        } catch (IOException ex) {
+            ex.printStackTrace(System.out);
+        }
+
+        for (Pregunta prg:
+             preguntas) {
+            System.out.println(prg.getPregunta());*/
+        }
     }
-}
-
+    /*System.out.println("-----------------------------------");
+    System.out.println("    ¿QUIÉRES SER MILLONARIO? ");
+    System.out.println("   Llegaste al lugar indicado ");
+    System.out.println("-----------------------------------");*/
