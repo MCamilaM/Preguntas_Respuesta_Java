@@ -35,7 +35,6 @@ public class AccesoDatos implements IAccesoDatos{
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria){
         File archivo = new File(nombreArchivo);
         List<Pregunta> preguntas = new ArrayList<>();
-        System.out.println("ssads");
         try {
             BufferedReader entrada = new BufferedReader(new FileReader(archivo));
             String lectura = entrada.readLine();
@@ -45,7 +44,7 @@ public class AccesoDatos implements IAccesoDatos{
                 Integer id = Integer.parseInt(cadena[0]);
                 Integer idCat = Integer.parseInt(cadena[2]);
 
-                if(idCategoria == idCat){
+                if(idCategoria == idCategoria){
                     preguntas.add(new Pregunta(id,cadena[1],idCat));
                 }
 
@@ -65,24 +64,23 @@ public class AccesoDatos implements IAccesoDatos{
         File archivo = new File(nombreArchivo);
         List<Respuesta> respuestas = new ArrayList<>();
         Respuesta respuesta = null;
-        System.out.println("111111");
+        //System.out.println("111111");
         try {
             BufferedReader entrada = new BufferedReader(new FileReader(archivo));
             String lectura = entrada.readLine();
 
             while (lectura != null) {
                 String[] cadena = lectura.split(",");
-                System.out.println("22222222");
-                Integer idRespuesta = Integer.parseInt(cadena[0]);
-                String descripcion = cadena[1];
-                Boolean esCorrecta = Boolean.parseBoolean(cadena[2]);
+
                 Integer id = Integer.parseInt(cadena[3]);
                 if(id == idPregunta){
+                    Integer idRespuesta = Integer.parseInt(cadena[0]);
+                   String descripcion = cadena[1];
+                   Boolean esCorrecta = Boolean.parseBoolean(cadena[2]);
                      respuesta = new Respuesta(idRespuesta, descripcion, esCorrecta, id);
                      respuestas.add(respuesta);
-                    System.out.println("333333333");
+                    //System.out.println("entre al if");
                 }
-
                 lectura = entrada.readLine();
             }
             entrada.close();

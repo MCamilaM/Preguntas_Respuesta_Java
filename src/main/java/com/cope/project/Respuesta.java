@@ -4,9 +4,9 @@ public class Respuesta {
     private int id;
     private String descripcion;
     private boolean esCorrecta;
-    private int idPregunta;
+    private Integer idPregunta;
 
-    public Respuesta(int id, String descripcion, boolean esCorrecta, int idPregunta) {
+    public Respuesta(int id, String descripcion, boolean esCorrecta, Integer idPregunta) {
         this.id = id;
         this.descripcion = descripcion;
         this.esCorrecta = esCorrecta;

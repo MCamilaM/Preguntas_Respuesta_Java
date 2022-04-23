@@ -63,7 +63,7 @@ public class Ronda {
     }
 
     public void listarRespuestas(){
-        List<Respuesta> respuestas = accesoDatos.listarRespuesta("respuestas.txt", 1);
+        List<Respuesta> respuestas = accesoDatos.listarRespuesta("respuestas.txt", this.pregunta.getIdPregunta());
         int cont = 1;
         for (Respuesta rpta: respuestas) {
             System.out.println(cont+". "+rpta.getDescripcion());
