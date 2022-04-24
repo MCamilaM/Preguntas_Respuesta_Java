@@ -5,8 +5,8 @@ public class Jugador {
     private String nombre;
     private Puntaje pj;
 
-    public Jugador(){
-        this.id=1;
+    public Jugador() {
+        this.id = 1;
     }
 
     public Integer getId() {

@@ -24,7 +24,7 @@ public class Ronda {
         categoria = new Categoria();
         pregunta = new Pregunta();
         puntaje = new Puntaje();
-        jugador=new Jugador();
+        jugador = new Jugador();
     }
 
     public void iniciarRonda() {
@@ -41,11 +41,11 @@ public class Ronda {
 
     }
 
-    public void solicitarDatosJugador(){
+    public void solicitarDatosJugador() {
 
     }
 
-    public void incrementarPuntaje(){
+    public void incrementarPuntaje() {
         this.puntaje = this.accesoDatos.listarPuntaje("puntajes.txt", this.categoria.getIdCategoria());
     }
 
@@ -86,7 +86,7 @@ public class Ronda {
                 // e.printStackTrace();
             }
         } while ((opcion > 5 || opcion < 1) && opcion != 5);
-        if (opcion == 5){
+        if (opcion == 5) {
             salirRondaIntensional();
             agregarHistorico();
         } else {
@@ -109,6 +109,7 @@ public class Ronda {
             siguienteRonda(); // pasa a la siguiente pregunta
         } else {
             terminarJuegoForzado(); // pierde y se terminar el juego
+            this.puntaje.setPuntaje(0);
             agregarHistorico();
         }
     }
@@ -156,7 +157,7 @@ public class Ronda {
         this.accesoDatos.escribirHistorico("historicos.txt", nombre + ": " + puntaje);
     }
 
-    public void listarHistorico(){
+    public void listarHistorico() {
         List<String> historicos = this.accesoDatos.listarHistorico("historicos.txt");
         for (String historico : historicos) {
             System.out.println(historico);

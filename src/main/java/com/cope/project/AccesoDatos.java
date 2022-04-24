@@ -149,10 +149,9 @@ public class AccesoDatos implements IAccesoDatos {
     public void escribirHistorico(String nombreArchivo, String historico) {
         File archivo = new File(nombreArchivo);
         try {
-             PrintWriter salida = new PrintWriter(new FileWriter(archivo,true));
-            salida.append(historico);
+            PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
+            salida.println(historico);
             salida.close();
-            //System.out.println("Se ha anexado en el archivo");
         } catch (FileNotFoundException ex) {
             ex.printStackTrace(System.out);
         } catch (IOException ex) {

@@ -13,15 +13,14 @@ public class Puntaje {
         this.puntaje = puntaje;
     }
 
-    /*public void incrementarPuntaje(Integer puntos) {
-        this.puntaje += puntos;
-    }*/
-
     public Integer getPuntaje() {
         return puntaje;
     }
 
-    public Integer getIdPuntaje() {
-        return idPuntaje;
+    public void setPuntaje(Integer puntaje) {
+        this.puntaje = puntaje;
     }
+
+
 }
+
