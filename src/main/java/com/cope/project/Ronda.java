@@ -153,7 +153,7 @@ public class Ronda {
     public void agregarHistorico() {
         String nombre = this.jugador.getNombre();
         String puntaje = String.valueOf(this.puntaje.getPuntaje());
-        this.accesoDatos.escribirHistorico("historicos.txt",nombre + ": " + puntaje);
+        this.accesoDatos.escribirHistorico("historicos.txt", nombre + ": " + puntaje);
     }
 
     public void listarHistorico(){

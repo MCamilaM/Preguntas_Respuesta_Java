@@ -1,0 +1,4 @@
+Perreo: 0
+Salsa: 50
+Sofkia: 50
+Camilo: 0
