@@ -3,6 +3,9 @@ package com.cope.project;
 
 import java.util.List;
 
+/**
+ *Interfaz para el acceso de datos de los archivos.txt
+ */
 public interface IAccesoDatos {
 
     Categoria listarCategoria(String nombreArchivo, Integer idCategoria);

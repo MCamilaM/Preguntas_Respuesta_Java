@@ -4,6 +4,7 @@ import java.io.*;
 import java.io.BufferedReader;
 
 /**
+ * Juego de preguntas que sube de dificultad y acumula un premio.
  * @Author: Camila Morales - Josep Palomino - Sara Oquendo
  */
 public class Main {

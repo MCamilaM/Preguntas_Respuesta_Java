@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Define lo que sucederá en cada ronda, al momento de responder correctamente una pregunta, responder mal,
+ * o salir del juego
+ */
 public class Ronda {
     private Integer numRonda;
     private Categoria categoria;

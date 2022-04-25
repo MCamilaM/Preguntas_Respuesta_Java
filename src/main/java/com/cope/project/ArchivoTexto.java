@@ -5,16 +5,23 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 
+/**
+ *Apertura del fichero y creacion de BufferedReader
+ *para pode hacer una lectura comoda (disponer del metodo readLine()).
+ */
 public class ArchivoTexto {
 
+    /**
+     *
+     * @param nombreArchivo
+     */
     public void leerArchivo(String nombreArchivo) {
         try {
             File archivo = null;
             FileReader fr = null;
             BufferedReader br = null;
             try {
-                // Apertura del fichero y creacion de BufferedReader para poder
-                // hacer una lectura comoda (disponer del metodo readLine()).
+
                 archivo = new File(nombreArchivo);
                 fr = new FileReader(archivo);
                 br = new BufferedReader(fr);
