@@ -21,6 +21,9 @@ public class Ronda {
     private List<Respuesta> respuestas;
     Scanner capturar = new Scanner(System.in);
 
+    /**
+     * Variable de la ronda
+     */
     public Ronda() {
         this.numRonda = 1;
         accesoDatos = new AccesoDatos();
@@ -31,6 +34,10 @@ public class Ronda {
         jugador = new Jugador();
     }
 
+    /**
+     *Método para comenzar una ronda que imprime mensaje, una pregunta y categoría aleatoria.
+     * También aumenta las rondas
+     */
     public void iniciarRonda() {
         System.out.print("Ingrese su nombre de usuario: ");
         this.jugador.setNombre(capturar.nextLine());
@@ -45,14 +52,23 @@ public class Ronda {
 
     }
 
+    /**
+     *Método del jugador
+     */
     public void solicitarDatosJugador() {
 
     }
 
+    /**
+     *Método para incrementar el puntaje según la ronda
+     */
     public void incrementarPuntaje() {
         this.puntaje = this.accesoDatos.listarPuntaje("puntajes.txt", this.categoria.getIdCategoria());
     }
 
+    /**
+     *Lista las categorías de nuestro juego (dificultad)
+     */
     public void listarCategoria() {
         this.categoria = accesoDatos.listarCategoria("categoria.txt", this.numRonda);
     }
@@ -89,6 +105,7 @@ public class Ronda {
                 capturar.nextLine();
                 // e.printStackTrace();
             }
+
         } while ((opcion > 5 || opcion < 1) && opcion != 5);
         if (opcion == 5) {
             salirRondaIntensional();
@@ -98,6 +115,9 @@ public class Ronda {
         }
     }
 
+    /**
+     *Incrementa el nivel o la ronda del jugador
+     */
     public void incrementarNumeroRonda() {
         this.numRonda = numRonda + 1;
     }
@@ -118,6 +138,9 @@ public class Ronda {
         }
     }
 
+    /**
+     *Mustra mensaje, número de ronda o nivel, carga la nueva pregunta aleatoria y las respuestas
+     */
     public void siguienteRonda() {
         System.out.println("\n-----------------------------------");
         System.out.println("|       ¡Brus, Brus, Brus!        |");
@@ -130,6 +153,9 @@ public class Ronda {
         listarRespuestas();
     }
 
+    /**
+     *Método que obtiene el puntaje del jugador cuando se sale por su cuenta
+     */
     public void salirRondaIntensional() {
         System.out.println("\nTu puntaje es: " + this.puntaje.getPuntaje());
         System.out.println("-----------------------------------");
@@ -138,6 +164,9 @@ public class Ronda {
         System.out.println(" ");
     }
 
+    /**
+     *Método que indica el fin del juego, ya no hay más rondas
+     */
     public void finalizarJuego() {
         System.out.println("\n-----------------------------------");
         System.out.println("|       G A N A S T E :)          |");
@@ -146,6 +175,9 @@ public class Ronda {
         System.out.println(" ");
     }
 
+    /**
+     *Método para sacar al jugador porque respondió mal una pregunta.
+     */
     public void terminarJuegoForzado() {
         System.out.println("\n-----------------------------------");
         System.out.println("|   Practica más para la próxima  |");
@@ -155,12 +187,18 @@ public class Ronda {
         System.out.println(" ");
     }
 
+    /**
+     *Método para agregar al histórico
+     */
     public void agregarHistorico() {
         String nombre = this.jugador.getNombre();
         String puntaje = String.valueOf(this.puntaje.getPuntaje());
         this.accesoDatos.escribirHistorico("historicos.txt", nombre + ": " + puntaje);
     }
 
+    /**
+     *Método para llamar y mostrar el historico del juego
+     */
     public void listarHistorico() {
         List<String> historicos = this.accesoDatos.listarHistorico("historicos.txt");
         for (String historico : historicos) {

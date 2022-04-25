@@ -10,11 +10,11 @@ public class Respuesta {
     private Integer idPregunta;
 
     /**
-     *
+     *Inicializa los atributos de las respuestas
      * @param id
      * @param descripcion
      * @param esCorrecta
-     * @param idPregunta
+     * @param idPregunta, identificador de la pregunta
      */
     public Respuesta(int id, String descripcion, boolean esCorrecta, Integer idPregunta) {
         this.id = id;
@@ -24,15 +24,15 @@ public class Respuesta {
     }
 
     /**
-     *
-     * @return
+     *Evalua pregunta/respuesta
+     * @return devuelve resultado
      */
     public boolean isCorrecta() {
         return correcta;
     }
 
     /**
-     *
+     *Obtiene la descripción de la respuesta
      * @return
      */
     public String getDescripcion() {

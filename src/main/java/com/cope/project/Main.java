@@ -4,7 +4,7 @@ import java.io.*;
 import java.io.BufferedReader;
 
 /**
- * Juego de preguntas que sube de dificultad y acumula un premio.
+ * Juego de preguntas que sube de dificultad y acumula un puntos.
  * @Author: Camila Morales - Josep Palomino - Sara Oquendo
  */
 public class Main {
@@ -48,6 +48,7 @@ public class Main {
                         System.out.println("Por favor, ingresa un opción valida. del 1 al 4: ");
                         break;
                 }
+
             } catch (Exception e) {
                 System.out.println("Por favor, ingrese un dato válido.");
             }
@@ -56,6 +57,9 @@ public class Main {
         }
     }
 
+    /**
+     * Muestra como jugar y lo que significan las llaves del menú para el jugador
+     */
     public static void mostrarInstrucciones() {
         System.out.println("-----------------------------------");
         System.out.println("|          Instrucciones          |");
@@ -75,6 +79,5 @@ public class Main {
                 "\n\n  Buena Suerte :DDD!");
         System.out.println("--------------------------------------------------------------------------------------");
     }
-
 
 }

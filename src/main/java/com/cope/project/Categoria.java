@@ -1,7 +1,7 @@
 package com.cope.project;
 
 /**
- * Objeto categoría: crea categorias y se inicializan sus atributos
+ * Representa el objeto categoría: crea categorias y se inicializan sus atributos.
  */
 public class Categoria {
     private Integer idCategoria;
@@ -12,18 +12,19 @@ public class Categoria {
     }
 
     /**
-     *
-     * @param idCategoria
+     *Inicializa atributos para categoría
+     * @param idCategoria, identificador de categoría
      * @param descripcion
      */
+    //Constructor
     public Categoria(Integer idCategoria, String descripcion) {
         this.idCategoria = idCategoria;
         this.descripcion = descripcion;
     }
 
     /**
-     *
-     * @return
+     *Obtiene el id de las categorías
+     * @return categorias
      */
     public Integer getIdCategoria() {
         return idCategoria;
