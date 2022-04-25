@@ -7,13 +7,13 @@ import java.io.FileReader;
 
 /**
  *Apertura del fichero y creacion de BufferedReader
- *para pode hacer una lectura comoda (disponer del metodo readLine()).
+ *para pode hacer una lectura comoda.
  */
 public class ArchivoTexto {
 
     /**
-     *
-     * @param nombreArchivo
+     *busca y lee archivos para usarse en el acceso de datos
+     * @param nombreArchivo, busca y lee archivos txt
      */
     public void leerArchivo(String nombreArchivo) {
         try {
@@ -37,7 +37,7 @@ public class ArchivoTexto {
                         fr.close();
                     }
                 } catch (Exception e2) {
-                    System.out.println("Todo fallo, apague y vamonos");
+                    System.out.println("Todo falló, apague y vamonos");
                 }
 
             }

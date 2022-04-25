@@ -1,7 +1,8 @@
 package com.cope.project;
 
 /**
- * guarda al jugador y su puntaje
+ * guarda al jugador y su puntaje.
+ * Agrega al historico.
  */
 public class Historico {
     private String nombre;

@@ -12,18 +12,19 @@ public class Puntaje {
     }
 
     /**
-     *
-     * @param idPuntaje
+     *Inicializa los atributos del puntaje
+     * @param idPuntaje, Identificador de puntaje
      * @param puntaje
      */
+    //Constructor
     public Puntaje(Integer idPuntaje, Integer puntaje) {
         this.idPuntaje = idPuntaje;
         this.puntaje = puntaje;
     }
 
     /**
-     *
-     * @return
+     *Obtiene el puntaje
+     * @return devuelve puntaje
      */
     public Integer getPuntaje() {
         return puntaje;

@@ -12,10 +12,10 @@ import java.io.FileReader;
 public class AccesoDatos implements IAccesoDatos {
 
     /**
-     *
-     * @param nombreArchivo
-     * @param idCategoria
-     * @return
+     *Busca la categoría en el archivo txt, la cual es reconocida por el id y se separa por: comas
+     * @param nombreArchivo, es para leer el archivo txt de categorías
+     * @param idCategoria, identificador de las categorías
+     * @return Retorna la categoría en orden
      */
     @Override
     public Categoria listarCategoria(String nombreArchivo, Integer idCategoria) {
@@ -45,10 +45,10 @@ public class AccesoDatos implements IAccesoDatos {
     }
 
     /**
-     *
-     * @param nombreArchivo
-     * @param idCategoria
-     * @return
+     *Busca la respuesta en el archivo txt, la cual es reconocida por el id y se separa por: comas
+     * @param nombreArchivo, es para leer el archivo txt de categorías
+     * @param idCategoria, identificador de las categorías
+     * @return Retorna la pregunta
      */
     @Override
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria) {
@@ -79,17 +79,17 @@ public class AccesoDatos implements IAccesoDatos {
     }
 
     /**
-     *
-     * @param nombreArchivo
-     * @param idPregunta
-     * @return
+     *Busca la respuesta en el archivo txt, la cual es reconocida por el id y se separa por: comas
+     * @param nombreArchivo, es para leer el archivo txt de preguntas
+     * @param idPregunta, es el identificador de las preguntas para llamarlas
+     * @return Retorna respuesta con boolean
      */
     @Override
     public List<Respuesta> listarRespuesta(String nombreArchivo, Integer idPregunta) {
         File archivo = new File(nombreArchivo);
         List<Respuesta> respuestas = new ArrayList<>();
         Respuesta respuesta = null;
-        //System.out.println("111111");
+
         try {
             BufferedReader entrada = new BufferedReader(new FileReader(archivo));
             String lectura = entrada.readLine();
@@ -104,7 +104,7 @@ public class AccesoDatos implements IAccesoDatos {
                     Boolean esCorrecta = Boolean.parseBoolean(cadena[2]);
                     respuesta = new Respuesta(idRespuesta, descripcion, esCorrecta, id);
                     respuestas.add(respuesta);
-                    //System.out.println("entre al if");
+
                 }
                 lectura = entrada.readLine();
             }
@@ -118,9 +118,9 @@ public class AccesoDatos implements IAccesoDatos {
     }
 
     /**
-     *
-     * @param nombreArchivo
-     * @param idCategoria
+     *Lista el puntaje guardado en: Puntaje
+     * @param nombreArchivo, es para leer el archivo txt de categorías
+     * @param idCategoria, identificador de las categorías
      * @return
      */
     @Override
@@ -152,9 +152,9 @@ public class AccesoDatos implements IAccesoDatos {
     }
 
     /**
-     *
-     * @param nombreArchivo
-     * @return
+     * Lista los historicos
+     * @param nombreArchivo, para los históricos
+     * @return retorna historicos
      */
     @Override
     public List<String> listarHistorico(String nombreArchivo) {
@@ -178,8 +178,8 @@ public class AccesoDatos implements IAccesoDatos {
     }
 
     /**
-     *
-     * @param nombreArchivo
+     * Imprime historicos
+     * @param nombreArchivo, llama archivo txt para los historicos
      * @param historico
      */
     @Override
