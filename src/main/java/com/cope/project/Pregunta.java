@@ -1,5 +1,8 @@
 package com.cope.project;
 
+/**
+ * Construye los atributos de las preguntas
+ */
 public class Pregunta {
     private int idPregunta;
     private String pregunta;
@@ -9,12 +12,22 @@ public class Pregunta {
     public Pregunta() {
     }
 
+    /**
+     *
+     * @param idPregunta
+     * @param pregunta
+     * @param idCategoria
+     */
     public Pregunta(int idPregunta, String pregunta, int idCategoria) {
         this.idPregunta = idPregunta;
         this.pregunta = pregunta;
         this.idCategoria = idCategoria;
     }
 
+    /**
+     *
+     * @return
+     */
     public void cargarRespuestas() {
     }
 
@@ -24,6 +37,10 @@ public class Pregunta {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public int getIdPregunta() {
         return this.idPregunta;
     }

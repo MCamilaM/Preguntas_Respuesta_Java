@@ -6,7 +6,17 @@ import java.util.List;
 import java.io.File;
 import java.io.FileReader;
 
+/**
+ * Identifica y guarda los archivos de texto preguntas, respuestas, categoría, historico y puntajes
+*/
 public class AccesoDatos implements IAccesoDatos {
+
+    /**
+     *
+     * @param nombreArchivo
+     * @param idCategoria
+     * @return
+     */
     @Override
     public Categoria listarCategoria(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
@@ -34,7 +44,12 @@ public class AccesoDatos implements IAccesoDatos {
         return categoria;
     }
 
-
+    /**
+     *
+     * @param nombreArchivo
+     * @param idCategoria
+     * @return
+     */
     @Override
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
@@ -63,6 +78,12 @@ public class AccesoDatos implements IAccesoDatos {
         return preguntas;
     }
 
+    /**
+     *
+     * @param nombreArchivo
+     * @param idPregunta
+     * @return
+     */
     @Override
     public List<Respuesta> listarRespuesta(String nombreArchivo, Integer idPregunta) {
         File archivo = new File(nombreArchivo);
@@ -96,6 +117,12 @@ public class AccesoDatos implements IAccesoDatos {
         return respuestas;
     }
 
+    /**
+     *
+     * @param nombreArchivo
+     * @param idCategoria
+     * @return
+     */
     @Override
     public Puntaje listarPuntaje(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
@@ -124,6 +151,11 @@ public class AccesoDatos implements IAccesoDatos {
         return puntaje;
     }
 
+    /**
+     *
+     * @param nombreArchivo
+     * @return
+     */
     @Override
     public List<String> listarHistorico(String nombreArchivo) {
         File archivo = new File(nombreArchivo);
@@ -145,6 +177,11 @@ public class AccesoDatos implements IAccesoDatos {
         return historicos;
     }
 
+    /**
+     *
+     * @param nombreArchivo
+     * @param historico
+     */
     @Override
     public void escribirHistorico(String nombreArchivo, String historico) {
         File archivo = new File(nombreArchivo);
