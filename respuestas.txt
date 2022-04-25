@@ -6,10 +6,10 @@
 6,Poríferos,false,2
 7,Peces,false,2
 8,Mamíferos,true,2
-9,141592,true,3
-10,151692,false,3
+9,3141592,true,3
+10,3151692,false,3
 11,135215,false,3
-12,145215,false,3
+12,3141552,false,3
 13,80,false,4
 14,105,false,4
 15,90,true,4

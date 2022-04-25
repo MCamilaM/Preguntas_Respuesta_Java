@@ -52,12 +52,7 @@ public class Ronda {
 
     }
 
-    /**
-     *Método del jugador
-     */
-    public void solicitarDatosJugador() {
 
-    }
 
     /**
      *Método para incrementar el puntaje según la ronda

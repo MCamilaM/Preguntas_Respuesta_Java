@@ -7,7 +7,6 @@ public class Pregunta {
     private int idPregunta;
     private String pregunta;
     private int idCategoria;
-    private Respuesta[] respuestas;
 
     public Pregunta() {
     }
@@ -23,22 +22,6 @@ public class Pregunta {
         this.idPregunta = idPregunta;
         this.pregunta = pregunta;
         this.idCategoria = idCategoria;
-    }
-
-    /**
-     *Sirve para cargar las opciones de respuesta
-     * @return devuelve posibilidades de respuesta
-     */
-    public void cargarRespuestas() {
-    }
-
-    /**
-     * Mustra la respuesta
-     */
-    public void mostrarRespuestas() {
-        for (Respuesta respuesta : this.respuestas) {
-            System.out.println(respuesta.getDescripcion());
-        }
     }
 
     /**

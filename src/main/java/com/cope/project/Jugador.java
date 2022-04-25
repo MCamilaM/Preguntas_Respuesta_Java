@@ -7,7 +7,6 @@ package com.cope.project;
 public class Jugador {
     private Integer id;
     private String nombre;
-    private Puntaje pj;
 
     public Jugador() {
         this.id = 1;
@@ -45,11 +44,5 @@ public class Jugador {
         this.id = id;
     }
 
-    /**
-     *Asigna el puntaje del jugador
-     * @return devuelve el puntaje del jugador
-     */
-    public Puntaje getPj() {
-        return pj;
-    }
+
 }

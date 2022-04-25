@@ -5,7 +5,7 @@
 5,¿Cuál es un lenguaje de programación?,1
 6,¿Cuál no es un sabor primario?,2
 7,¿Cuántos años tengo sabiendo que la tercera parte de ellos menos 1 es igual a la sexta parte?,2
-8,¿Cuál es el autor de la letra del Himno Nacional?,2
+8,¿Cuál es el autor de la letra del Himno Nacional de Colombia?,2
 9,¿Cuál es la única ave capaz de volar hacia atrás?,2
 10,¿Quién es el autor del libro “Cien años de soledad”?,2
 11,¿Cómo se llama este templo subterráneo situado en Colombia?,3

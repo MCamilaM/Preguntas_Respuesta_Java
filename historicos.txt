@@ -1,4 +1,3 @@
-Perreo: 0
-Salsa: 50
-Sofkia: 50
-Camilo: 0
+
+Josep: 50
+Josep Manuel: 0

@@ -9,7 +9,7 @@ import java.io.FileReader;
 /**
  * Identifica y guarda los archivos de texto preguntas, respuestas, categoría, historico y puntajes
 */
-public class AccesoDatos implements IAccesoDatos {
+public class AccesoDatos {
 
     /**
      *Busca la categoría en el archivo txt, la cual es reconocida por el id y se separa por: comas
@@ -17,7 +17,6 @@ public class AccesoDatos implements IAccesoDatos {
      * @param idCategoria, identificador de las categorías
      * @return Retorna la categoría en orden
      */
-    @Override
     public Categoria listarCategoria(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
         Categoria categoria = null;
@@ -50,7 +49,6 @@ public class AccesoDatos implements IAccesoDatos {
      * @param idCategoria, identificador de las categorías
      * @return Retorna la pregunta
      */
-    @Override
     public List<Pregunta> listarPreguntas(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
         List<Pregunta> preguntas = new ArrayList<>();
@@ -84,7 +82,6 @@ public class AccesoDatos implements IAccesoDatos {
      * @param idPregunta, es el identificador de las preguntas para llamarlas
      * @return Retorna respuesta con boolean
      */
-    @Override
     public List<Respuesta> listarRespuesta(String nombreArchivo, Integer idPregunta) {
         File archivo = new File(nombreArchivo);
         List<Respuesta> respuestas = new ArrayList<>();
@@ -123,7 +120,6 @@ public class AccesoDatos implements IAccesoDatos {
      * @param idCategoria, identificador de las categorías
      * @return
      */
-    @Override
     public Puntaje listarPuntaje(String nombreArchivo, Integer idCategoria) {
         File archivo = new File(nombreArchivo);
         Puntaje puntaje = null;
@@ -156,7 +152,6 @@ public class AccesoDatos implements IAccesoDatos {
      * @param nombreArchivo, para los históricos
      * @return retorna historicos
      */
-    @Override
     public List<String> listarHistorico(String nombreArchivo) {
         File archivo = new File(nombreArchivo);
         List<String> historicos = new ArrayList<>();
@@ -182,7 +177,7 @@ public class AccesoDatos implements IAccesoDatos {
      * @param nombreArchivo, llama archivo txt para los historicos
      * @param historico
      */
-    @Override
+
     public void escribirHistorico(String nombreArchivo, String historico) {
         File archivo = new File(nombreArchivo);
         try {
